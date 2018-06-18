@@ -1,0 +1,7 @@
+/.idea
+/bin
+/log
+/pkg
+/conf
+stone-server.pid
+projectFilesBackup

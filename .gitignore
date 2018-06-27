@@ -2,6 +2,6 @@
 /bin
 /log
 /pkg
-/conf
+/config
 stone-server.pid
 projectFilesBackup

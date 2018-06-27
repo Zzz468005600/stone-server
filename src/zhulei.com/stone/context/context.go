@@ -40,8 +40,8 @@ var HTTPErrorHandler = func(err error, c echo.Context) {
 	if de, ok := err.(*SError); ok && de != nil {
 		if !c.Response().Committed() {
 			c.JSON(http.StatusOK, map[string]interface{}{
-				"code":  de.Code,
-				"msg": de.Msg,
+				"code": de.Code,
+				"msg":  de.Msg,
 			})
 		}
 		return

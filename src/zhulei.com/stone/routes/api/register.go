@@ -9,9 +9,9 @@ import (
 )
 
 type registerParams struct {
-	Name     string
-	Mobile   string
-	Password string
+	Name     string `json:"name"`
+	Mobile   string `json:"mobile"`
+	Password string `json:"password"`
 }
 
 func (p *registerParams) check() error {
@@ -47,7 +47,7 @@ var Register = func(c echo.Context) error {
 	defer tx.Rollback()
 
 	var count uint8
-	if err := tx.QueryRow(db.StmtUserFindByMobile, p.Mobile).Scan(&count); err != nil{
+	if err := tx.QueryRow(db.StmtUserFindByMobile, p.Mobile).Scan(&count); err != nil {
 		return context.ErrBadRequest(err.Error())
 	}
 	if count != 0 {

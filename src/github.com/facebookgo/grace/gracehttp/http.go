@@ -177,7 +177,7 @@ func Serve(servers ...*http.Server) error {
 }
 
 func writePID() {
-	f, ferr := os.OpenFile("fadaojia.pid", os.O_CREATE|os.O_RDWR|os.O_TRUNC, 0666)
+	f, ferr := os.OpenFile("stone.pid", os.O_CREATE|os.O_RDWR|os.O_TRUNC, 0666)
 	if ferr != nil {
 		log.Println(ferr)
 	}

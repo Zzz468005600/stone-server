@@ -32,7 +32,7 @@ func loadConfigs() error {
 	}
 	jerr := json.Unmarshal(data, &Configs)
 	if jerr != nil {
-		fmt.Println(err.Error())
+		fmt.Println(jerr.Error())
 		return jerr
 	}
 	return nil
